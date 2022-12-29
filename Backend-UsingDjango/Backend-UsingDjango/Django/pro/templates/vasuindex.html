@@ -1,0 +1,476 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Djnago WEB</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Home/dist/css/style.css' %}">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="{% static 'https://use.fontawesome.com/releases/v5.0.13/js/all.js' %}"
+    integrity="{% static 'sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe' %}"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="is-boxed has-animations">
+
+    <div class="ni highlightTextIn">
+        <div class="docnestlogo">
+            <a href="/app/home"><img src="{% static 'Home/dist/images/new-removebg-preview.png' %}" alt=""></a>
+        </div>
+        <div class="navbar">
+            <!-- <a alt="HOME">Home</a> -->
+            <a href="/app/aboutus" alt="ABOUT">About</a>
+            <a href="/contact" alt="CONTACT">Contact</a>
+            {% if user.is_authenticated %}
+            <a href="/app/logout" alt="LOGOUT">Login</a>
+            {% else %}
+            <a href="/app/login" alt="LOGIN">Login</a>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+                                <img class="header-logo-image asset-light"
+                                    src="{% static 'Home/dist/images/logo-light.svg' %}" alt="Logo">
+                                <img class="header-logo-image asset-dark"
+                                    src="{% static 'Home/dist/images/logo-dark.svg' %}" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+        </header>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-copy">
+                        <h1 class="hero-title mt-0">Make your File conversion simpler</h1>
+                        <p class="hero-paragraph">Docnest was built with you in mind. Say goodbye to complicated
+                            software & hello to easy-to-use PDF tools. Edit, merge, convert, compress, your documents in
+                            just a few clicks.</p>
+                        <div class="hero-cta">
+                            <!-- <a class="button button-primary" href="#">Buy it now</a> -->
+                            <div class="lights-toggle">
+                                <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch"
+                                    checked="checked">
+                                <label for="lights-toggle" class="text-xs"><span>Turn me <span
+                                            class="label-text">dark</span></span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-media">
+                        <div class="header-illustration">
+                            <img class="header-illustration-image asset-light"
+                                src="{% static 'Home/dist/images/header-illustration-light.svg' %}"
+                                alt="Header illustration">
+                            <img class="header-illustration-image asset-dark"
+                                src="{% static 'Home/dist/images/header-illustration-dark.svg' %}"
+                                alt="Header illustration">
+                        </div>
+                        <div class="hero-media-illustration">
+                            <img class="hero-media-illustration-image asset-light"
+                                src="{% static 'Home/dist/images/hero-media-illustration-light.svg' %}"
+                                alt="Hero media illustration">
+                            <img class="hero-media-illustration-image asset-dark"
+                                src="{% static 'Home/dist/images/hero-media-illustration-dark.svg' %}"
+                                alt="Hero media illustration">
+                        </div>
+                        <div class="hero-media-container">
+                            <!-- <img class="hero-media-image asset-light" src="dist/images/hero-media-light.svg" alt="Hero media"> -->
+                            <img class="hero-media-image asset-light"
+                                src="http://boldist.co/wp-content/uploads/2020/11/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled.jpg"
+                                alt="Hero media">
+
+                            <!-- <img class="hero-media-image asset-dark" src="dist/images/hero-media-dark.svg" alt="Hero media"> -->
+                            <img class="hero-media-image asset-dark"
+                                src="http://boldist.co/wp-content/uploads/2020/11/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled.jpg"
+                                alt="Hero media">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="feartureheading">
+                <span> Features </span>
+            </div>
+            <div class="ourfeature">
+                <div class="featuredisc">
+                    <span> Here You can Use any Tool to convert your file into necessitate file</span>
+                </div>
+
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/50/000000/merge-files.png" />
+                            <div class="mergeheading">
+                                <span> Merge</span>
+                            </div>
+                            <div class="mergedisc">
+                                <span> Combine multiple PDFs into one unified document</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/50/000000/merge-files.png" />
+                            <div class="mergeheading">
+                                <span> Split</span>
+                            </div>
+                            <div class="mergedisc">
+                                <span> Extract pages from your PDF or save each page as a separate PDF</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/60/000000/word.png" />
+                            <div class="mergeheading">
+                                <span> PDF to Word </span>
+                            </div>
+                            <div class="mergedisc">
+                                <span> Convert PDF to Word documents </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/60/000000/xls.png" />
+                            <div class="mergeheading">
+                                <span> PDF to Excel
+                            </div>
+                            <div class="mergedisc">
+                                <span> Convert PDF to Word spreadsheets </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/60/000000/powerpoint.png" />
+                            <div class="mergeheading">
+                                <span> PDF to PPT </span>
+                            </div>
+                            <div class="mergedisc">
+                                <span>
+                                    Convert PDF to PowerPoint presentations
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/60/000000/image-file.png" />
+                            <div class="mergeheading">
+                                <span> PDF to Image </span>
+                            </div>
+                            <div class="mergedisc">
+                                <span> Extract images from your PDF or save each page as a separate image</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/color/60/000000/delete-file.png" />
+                            <div class="mergeheading">
+                                <span> Delete PDF Pages</span>
+                            </div>
+                            <div class="mergedisc">
+                                <span> Remove one or multiple pages from your PDF </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="popupbox">
+                    <a class="popupbutton" href="#popup1">
+                        <div class="merge">
+                            <img src="https://img.icons8.com/ios-filled/60/000000/rotate-left.png" />
+                            <div class="mergeheading">
+                                <span> Rotate PDF</span>
+                            </div>
+                            <div class="mergedisc">
+                                <span> Rotate one or all pages in your PDF</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="alltools">
+                    <button type="button">
+                        See All PDF Tools
+                    </button>
+                </div>
+            </div>
+
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <section id="uploading">
+                                <div class="uploadbox">
+                                    <img id="uploadimg" src="https://img.icons8.com/plasticine/101/000000/file.png" />
+                                    <div class="draganddrop">
+                                        <pre class="draganddrop1"> Drag or Drop your file here</pre>
+                                        <pre class="draganddrop2">            or</pre>
+                                        <br>
+                                    </div>
+                                    <div class="browse">
+                                        <label for="img" class="btn btn-info" id="in1">Browse</label>
+                                        <input type="file" id="img" id="in1" style="display:none" name="upfiles">
+                                        <label class="btn btn-info" id="in2"></label>
+                                        <!-- <input type="submit"  style="display:none" id="in2"> -->
+                                        <input type="submit" id="in2">
+
+                                        <!-- <input type="file" name="upfiles" id="in1">
+                                        <br>
+                                        <input type="submit" id="in2"> -->
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <hr class="aftermain">
+    </main>
+    <!-- <footer>
+        <section class="upperfooter">
+            <div class="upperfooterimg">
+                <img src="dist/images/new-removebg-preview.png" alt="">
+            </div>
+            <div class="company">
+                <div class="companyheading">
+                    Company
+                </div>
+                <div class="death">
+                    <a href="AboutUs/about_us.html">About Us</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+ <section class="features section">
+                <div class="container">
+                    <div class="features-inner section-inner has-bottom-divider">
+                        <div class="features-header text-center">
+                            <div class="container-sm">
+                                <h2 class="section-title mt-0">The Product</h2>
+	                            <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+								<div class="features-image">
+                                    <img class="features-illustration asset-dark" src="dist/images/features-illustration-dark.svg" alt="Feature illustration">
+									<img class="features-box asset-dark" src="dist/images/features-box-dark.svg" alt="Feature box">
+									<img class="features-illustration asset-dark" src="dist/images/features-illustration-top-dark.svg" alt="Feature illustration top">
+									<img class="features-illustration asset-light" src="dist/images/features-illustration-light.svg" alt="Feature illustration">
+									<img class="features-box asset-light" src="dist/images/features-box-light.svg" alt="Feature box">
+									<img class="features-illustration asset-light" src="dist/images/features-illustration-top-light.svg" alt="Feature illustration top">
+								</div>
+							</div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img class="asset-light" src="dist/images/feature-01-light.svg" alt="Feature 01">
+										<img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
+                                    </div>
+									<div class="feature-content">
+                                        <h3 class="feature-title mt-0">Discover</h3>
+                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+									</div>
+								</div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img class="asset-light" src="dist/images/feature-02-light.svg" alt="Feature 02">
+										<img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
+                                    </div>
+									<div class="feature-content">
+                                        <h3 class="feature-title mt-0">Discover</h3>
+                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+									</div>
+								</div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+                                        <img class="asset-light" src="dist/images/feature-03-light.svg" alt="Feature 03">
+										<img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
+                                    </div>
+									<div class="feature-content">
+                                        <h3 class="feature-title mt-0">Discover</h3>
+                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+    <section class="cta section">
+        <div class="container-sm">
+            <div class="cta-inner section-inner">
+                <div class="cta-header text-center">
+                    <h2 class="section-title mt-0">Keep Your Simple Tasks Simple</h2>
+                    <p class="section-paragraph">Docnest is the first and only PDF software you'll love. We have all the
+                        tools you'll need to start, manage, and finish your work with digital documents.</p>
+                    <!-- <div class="cta-cta">
+                                    <a class="button button-primary" href="#">Buy it now</a>    
+                                </div> -->
+                </div>
+                <img class="toolsimg" src="{% static 'Home\dist\images\ab5ca7885b7977da9e2a38bdc7ce397f.svg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    </main>
+    <!-- <footer class="site-footer has-top-divider">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="brand footer-brand">
+                    <a href="#">
+                        <img class="asset-light" src="{% static 'Home/dist/images/logo-light.svg' %}" alt="Logo">
+                        <img class="asset-dark" src="{% static 'Home/dist/images/logo-dark.svg' %}" alt="Logo">
+                    </a>
+                </div>
+                <ul class="footer-links list-reset">
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ's</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+                <ul class="footer-social-links list-reset">
+                    <li>
+                        <a href="#">
+                            <span class="screen-reader-text">Facebook</span>
+                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"
+                                    fill="#FFF" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="screen-reader-text">Twitter</span>
+                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"
+                                    fill="#FFF" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="screen-reader-text">Google</span>
+                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"
+                                    fill="#FFF" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer-copyright">&copy; 2018 Switch, all rights reserved</div>
+            </div>
+        </div>
+    </footer> -->
+
+
+
+    <footer class="site-footer has-top-divider">
+        <div class="container">
+            <div class="site-footer-inner">
+                <div class="brand footer-brand">
+                    <a href="#">
+                        <img src="{% static 'Home/dist/images/new-removebg-preview.png' %}" alt="Logo" style="width: 52%;">
+                    </a>
+                </div>
+                <ul class="footer-links list-reset">
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="AboutUs/about_us.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ's</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+                <ul class="footer-social-links list-reset">
+                    <li>
+                        <div class="rounded-social-buttons">
+                            <a class="social-button facebook" href="https://www.facebook.com/people/Docnest-Sgp/100086323849001" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="rounded-social-buttons">
+                            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
+                                    class="fab fa-twitter"></i></a>
+                        </div>
+                    </li> -->
+                    <li>
+                        <div class="rounded-social-buttons">
+                            <a class="social-button linkedin" href="https://www.linkedin.com/in/docnest-sgp-275932252/" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rounded-social-buttons">
+                            <a class="social-button gmail" href="https://github.com/Group56914" target="_blank"><img src="https://img.icons8.com/sf-black-filled/64/000000/github.png"/></a>
+                            <!-- <a class="social-button gmail" href=https://github.com/Group56914" target="_blank"><i
+                                class="fab fa-github"></i></a> -->
+                            <!-- img src="{% static 'https://img.icons8.com/sf-black-filled/64/000000/github.png' %}" -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rounded-social-buttons">
+                            <a class="social-button instagram" href="https://instagram.com/team_docnest?igshid=YmMyMTA2M2Y=" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="footer-copyright">&copy; 2018 Switch, all rights reserved</div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="{% static 'Home/dist/js/main.min.js' %}"></script>
+</body>
+
+</html>
